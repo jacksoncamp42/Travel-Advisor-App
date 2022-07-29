@@ -28,12 +28,12 @@ const Home = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    getPlacesData(bounds?.sw, bounds?.ne).then((data) => {
+    getPlacesData(type, bounds?.sw, bounds?.ne).then((data) => {
       console.log(data);
       setPlaces(data);
       setIsLoading(false);
     });
-  }, [coordinates, bounds]);
+  }, [type, coordinates, bounds]);
 
   return (
     <Flex
