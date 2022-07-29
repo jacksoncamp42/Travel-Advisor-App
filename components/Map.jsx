@@ -17,7 +17,14 @@ const Map = ({setCoordinates, coordinates, setBounds}) => {
         setBounds({ne: e.marginBounds.ne, sw: e.marginBounds.sw})
       }}
       onChildClick={() => {}}
-    ></GoogleMapReact>
+    >
+      {places?.map((place, i) => {
+        <Box>
+          lat={Number(place.latitude)}
+          lng={Number(place.longitude)}
+        </Box>
+      })}
+    </GoogleMapReact>
 </Box>)
 }
 
