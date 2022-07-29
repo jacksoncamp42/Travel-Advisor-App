@@ -1,11 +1,12 @@
+/* eslint-disable @next/next/no-sync-scripts */
 import { Flex } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import Header from "../components/Header";
 import List from "../components/List";
 import Map from "../components/Map";
 import PlaceDetail from "../components/PlaceDetail";
-import Head from "next/head";
 import { getPlacesData } from "./api";
+import Head from "next/head";
 
 const Home = () => {
   const [places, setPlaces] = useState([]);
@@ -17,7 +18,7 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    //get user's current location on initial login
+    // get the users current location on intial login
 
     navigator.geolocation.getCurrentPosition(
       ({ coords: { latitude, longitude } }) => {
@@ -30,6 +31,7 @@ const Home = () => {
   useEffect(() => {
     const filteredData = places.filter((place) => place.rating > ratings);
     setFilteredPlaces(filteredData);
+    console.log({ ratings });
   }, [ratings]);
 
   useEffect(() => {
@@ -51,6 +53,10 @@ const Home = () => {
       maxHeight={"100vh"}
       position={"relative"}
     >
+      <Head>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyATnaIP2R69_SfyKSE4D7f5wFXzhcE2SS8"></script>
+      </Head>
+
       <Header
         setType={setType}
         setRatings={setRatings}

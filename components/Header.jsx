@@ -4,8 +4,18 @@ import {Autocomplete} from "@react-google-maps/api"
 
 import {BiChevronDown, BiHotel, BiMapAlt, BiRestaurant, BiSearch, BiStar} from 'react-icons/bi'
 import { Rating } from "@material-ui/lab";
+import { useState } from 'react';
 
 const Header = ({setType, setRatings, setCoordinates}) => {
+  
+  const[autocomplete, setAutocomplete] = useState(null)
+  const onLoad = (autoC) => setAutocomplete(autoC)
+  const onPlaceChanged = () => {
+    const lat = autocomplete.getPlace().geometry.location.lat()
+    const lng = autocomplete.getPlace().geometry.location.lng()
+    setCoordinates({lat, lng})
+  }
+
   return (
   <Flex 
   position={'absolute'} 
@@ -17,7 +27,7 @@ const Header = ({setType, setRatings, setCoordinates}) => {
   zIndex={101}
   >
     <Flex>
-      {/* <Autocomplete> */}
+      <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
         <InputGroup width={'35vw'} shadow='lg'>
           <InputRightElement
             pointerEvents={"none"}>
@@ -35,7 +45,7 @@ const Header = ({setType, setRatings, setCoordinates}) => {
           _placeholder={{color: 'gray.700'}}
           />
         </InputGroup>
-      {/* </Autocomplete> */}
+      </Autocomplete>
 
       <Flex
         alignItems={'center'}
