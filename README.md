@@ -1,23 +1,19 @@
-# Travel Advisor
+# Trip Advisor
+<img width="1680" alt="Screen Shot 2022-07-30 at 11 04 54 AM" src="https://user-images.githubusercontent.com/37753577/181936112-a35a3e3d-4779-4856-acd1-382722895138.png">
 
-**GitHub:** [<u>https://github.com/jacksoncamp42/Travel-Advisor-App</u>][1]
-
-[1]: https://github.com/jacksoncamp42/Travel-Advisor-App
-
-**About:** App Geolocation, Google Maps API & Google Places API, fetching API data based on the location, data filtering are just some features that make this Google Map Companion Application that you can currently find on YouTube
+**About:** An app with an interactive map that uses real-time location to locate and suggest nearby restaurants, hotels, and attractions. 
 
 **Key Features** 
-- Interactive Map: 
-- 
-- 
+- Interactive Map: Change location and suggested businesses by zooming in/out and dragging
+- Search: Change and search for location with Google autocomplete
+- Ratings: Filter by star ratings of businesses
+- Map Pinpoints: Select between restaurants, hotels, or attractions category to filter to view businesses pinpointed on map
+- Business: Scroll through suggested restaurants/hotels/attractions in nice card layout with further details of business
 
-**Built With:** TypeScript, React, Firebase
-
+**Built With:** JavaScript, React, Rapid API, Google APIs
 ## Demo
-![First22_-_Trip_advisor_AdobeExpress (1)](https://user-images.githubusercontent.com/37753577/181868012-e964a12d-2445-409d-afbb-e4432d92667c.gif)
-
-
-## Team
-- **Jackson Camp**, Cornell University
 
 ![done](https://user-images.githubusercontent.com/37753577/181871948-4ef97c2c-28ae-465a-bebf-feabe9d234dd.gif)
+
+- **Jackson Camp**, Cornell University
+
