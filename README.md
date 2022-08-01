@@ -10,7 +10,7 @@
 - Map Pinpoints: Select between restaurants, hotels, or attractions category to filter to view businesses pinpointed on map
 - Business: Scroll through suggested restaurants/hotels/attractions in nice card layout with further details of business
 
-**Built With:** JavaScript, React, Rapid API, Google APIs
+**Built With:** JavaScript, Next.js, Google Maps API, Rapid API
 ## Demo
 
 ![done](https://user-images.githubusercontent.com/37753577/181871948-4ef97c2c-28ae-465a-bebf-feabe9d234dd.gif)
