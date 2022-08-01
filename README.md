@@ -1,7 +1,7 @@
 # Trip Advisor
 <img width="1680" alt="Screen Shot 2022-07-30 at 11 04 54 AM" src="https://user-images.githubusercontent.com/37753577/181936112-a35a3e3d-4779-4856-acd1-382722895138.png">
 
-**About:** An app with an interactive map that uses real-time location to locate and suggest nearby restaurants, hotels, and attractions. 
+**About:** App that recommends nearby restaurants, hotels, and attractions. It displays real-time location allows user to change location to anywhere in world, by leveraging Google Maps API and Rapid API. It also enables clients to filter businesses by star ratings, type, and location.
 
 **Key Features** 
 - Interactive Map: Change location and suggested businesses by zooming in/out and dragging
